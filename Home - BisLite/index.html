@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+	<head>		
+		<meta  charset="utf-8" />		
+		<title>Home - BisLite</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>  		
+		<link rel="stylesheet" href="folha.css">
+   
+   <!-- Slide/JS -->
+   <script type="text/javascript">
+
+
+   </script>
+
+   <style>
+    /* Prevents slides from flashing */
+
+    @font-face {
+       font-family: myFont; /*a name to be used later*/
+       src: url('font/fontawesome-webfont.ttf');
+    }
+
+    #slides {
+      display:none;
+    }
+
+    .slidesjs-previous
+    {
+     visibility: hidden;
+     display: none;
+    }
+
+    .slidesjs-next
+    {
+     visibility: hidden;
+     display: none;
+    }
+/*
+    
+
+    .slidesjs-previous:after
+    {
+
+      visibility: visible;
+     
+      background-size: 100% 100%;
+      width: 30px;
+      height: 30px;
+      font-size: 30px;
+      font-family: myFont;
+      color: rgb(0, 0, 0);
+      content: "< ";
+      display: inline-block;
+    }
+
+    
+
+    .slidesjs-next:after
+    {
+
+      visibility: visible;
+     
+      background-size: 100% 100%;
+      width: 30px;
+      height: 30px;
+      font-size: 30px;
+      font-family: times;
+      color: rgb(0, 0, 0);
+      content: " >";
+      display: inline-block;
+    }
+*/
+    .custom-navigation
+    {
+      display: inline-block;
+    }
+
+    .custom-navigation li
+    {
+      display: inline-block;
+    }
+
+    .custom-item
+     {
+      display: inline-block;
+     
+    }
+    .custom-navigation li a {
+      display: inline-block;
+      width: 13px;
+      height: 0;
+      padding-top: 13px;
+      background-image: url(img/pagination.png);
+      background-position: 0px 0px;
+      float: left;
+      overflow: hidden;
+     
+    }
+
+    .custom-navigation li a.active,
+    .custom-navigation li a:hover {
+      background-position: 0px -13px
+    }
+     
+    .menuPopUP
+    {
+      top: 10px;
+      position: absolute;
+      width: auto;
+      z-index: 200;
+      visibility: hidden;
+
+    }
+
+    .line
+    {
+      display: inherit;
+      position: relative;
+      left: 0px;
+      width:  100%;
+      height: 5px;
+      background-color: #0099ff;
+    }
+
+    .menuPopUP .item
+    {
+      padding-top:    12px;
+      padding-bottom:  2px;
+      padding-left:   20px;
+      padding-right:  20px;
+      margin:          0px;
+      background-color: #fff;
+    }
+	
+	.menuPopUP .item a{color:#000;}
+
+    .menuPopUP hr
+    {
+      padding:         0px;
+      margin:          0px;
+      position:        relative;
+      left:            0px;
+      width:          100%;
+    }
+    
+    .menuPopUP .margem
+    {
+      height: 40px;
+      width: auto;
+    }
+
+     .menuPopUP .item:hover
+     {
+      color: rgb(0, 100, 255);
+
+     }
+
+    .menuPopUP .item:hover a
+     {
+      color: rgb(0, 100, 255);
+      text-decoration: none;
+
+     }
+
+
+  </style>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="jquery.slides.min.js"></script>
+
+
+	</head>		
+	<body>
+		
+		<div class="container-fluid">
+			<header class="row">
+          <div class="col-sm-1">
+          </div>
+
+				  <img class="col-sm-2" src="logo.png">
+          <div class="col-sm-8 opcoes">
+            <div class="opcoesDoHeader" onmouseover="setMenu(this, '#pop1', false)" onmouseout="mouseOut()"><div class="linha"></div><a href="#">CONTACT US</a></div>
+            <div class="opcoesDoHeader" onmouseover="setMenu(this, '#pop1', false)" onmouseout="mouseOut()"><div class="linha"></div><a href="#">BLOG      </a></div>
+            <div class="opcoesDoHeader" onmouseover="setMenu(this, '#pop1', true)" onmouseout="mouseOut()"><div class="linha"></div><a href="#">PORTFOLIO </a><img class ="icon"src="IconDown.png"></div>
+            <div class="opcoesDoHeader" onmouseover="setMenu(this, '#pop2', true)" onmouseout="mouseOut()"><div class="linha"></div><a href="#">SERVICES  </a><img class ="icon"src="IconDown.png"></div>
+            <div class="opcoesDoHeader" onmouseover="setMenu(this, '#pop1', false)" onmouseout="mouseOut()"><div class="linha"></div><a href="#">ABOUT US  </a></div>
+            <div class="opcoesDoHeader" onmouseover="setMenu(this, '#pop1', false)" onmouseout="mouseOut()"><div class="linha"></div><a href="#">HOME </a></div>
+          </div>
+
+				  <div class="col-sm-1">
+          </div>
+          </header>
+
+		<div id="banner" class="row">  <!--banner-->
+        <div class="col-sm-1"></div>
+        <div id="slides" class="col-sm-10" > 			<!--<img src="banner.png" width="100%">-->
+    <img src="banner_in.png" width="100%">
+    <img src="banner_ex2.png" width="100%">
+    <img src="banner_ex3.png" width="100%">
+    <img src="banner_ex4.png" width="100%">
+    <img src="banner_ex5.png" width="100%">
+    	  </div>
+
+      <div class="col-sm-1"></div>
+
+        
+        </div>
+
+
+        <div class="row">
+          <div class="col-sm-5">
+          </div>
+
+          <div class="col-sm-2">
+            <!-- paginacao customisada -->
+            <ul class="custom-navigation">
+              <li><a href="#" class="custom-item" data-item="0">1</a></li>
+              <li><a href="#" class="custom-item" data-item="1">2</a></li>
+              <li><a href="#" class="custom-item" data-item="2">3</a></li>
+              <li><a href="#" class="custom-item" data-item="3">4</a></li>
+            </ul>
+          </div>
+
+          <div class="col-sm-5">
+          </div>
+
+        </div>
+        
+        <div id="meio" class="row"> <!-- meio -->
+        	<div class="col-sm-1"></div> <!--vazio-->
+            <div class="col-sm-2"><img src="clean_theme.png"> <strong>CLEAN THEME</strong><br><br>
+            Ut nec lorem id orci convallis porta. Donec pharetra neque eu velit dictum molestie. 
+            Duis porta gravida augue sed viverra. Quisque at nulla leo, non aliquet mi.<br><br>
+            <img src="arrow.png"> <a href="#" alt="read more">Read more</a>     
+            </div>
+            <div class="col-sm-3"><img src="responsive_design.png"> <strong>RESPONSIVE DESIGN</strong><br><br>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi euismod placerat dui et tincidunt. 
+            Sed sollicitudin posuere auctor. Phasellus at ultricies nisl. Integer at leo eros.<br><br><br><br>
+            <img src="arrow.png"> <a href="#" alt="read more">Read more</a>
+            </div>
+            <div class="col-sm-2"><img src="fully_layerd.png"> <strong>FULLY LAYERD PSD</strong><br><br>Phasellus lobortis metus non augue sodales volutpat.
+            Vestibulum sit amet nibh eros, hendrerit venenatis est. In vitae nulla nec purus cursus pretium sed id magna.
+            <br><br>
+            <img src="arrow.png"> <a href="#" alt="read more">Read more</a> 
+            </div>
+          <div class="col-sm-3"><img src="reading_for.png"> <strong>READING FOR CODING</strong><br><br>
+            Vivamus convallis feugiat mauris sed posuere. Nam rutrum, quam quis euismod commodo, elit est porta quam, non placerat eros neque porta ante. 									Fusce quis odio urna.<br><br><br><br>
+            <img src="arrow.png"> <a href="#" alt="read more">Read more</a>
+          </div>
+            <!--<div class="col-sm-1" style="background-color:#9FF;">TESTE</div>-->
+        </div>
+        
+<div id="works" class="row">  <!--inicio da seção lastest works -->
+	<div class="col-sm-1"></div> <!--vazio-->
+	<div class="col-sm-10"><img src="latest.png" width="100%"></div>
+	<div class="col-sm-1"></div> <!--vazio-->
+</div>
+
+ <div id="workimg" class="row"> <!--imagens da seção -->
+	<div class="col-sm-1"></div> <!--vazio-->
+	<div class="col-sm-10"><img src="work1.png"><img src="work2.png"><img src="work3.png"><img src="work4.png"></div>
+	<div class="col-sm-1"></div> <!--vazio-->
+</div>
+
+<div id="test" class="row"> <!-- testimonials/our clients -->
+	<div class="col-sm-1"></div> <!--vazio-->
+	<div class="col-sm-5"><strong><img src="test_icon.png"> TESTIMONIALS</strong><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut nulla sapien, at aliquam erat. Sed vitae massa tellus. Aliquam commodo aliquam metus, sed iaculis nibh tempus id. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam nec nisi in nisl euismod fringilla.<br><br><strong>John Travis, CEO, DomainName.com</strong></div>
+    <div class="col-sm-5"><strong><img src="client_icon.png"> OUR CLIENTS</strong><br><img src="clients.png"></div>
+	<div class="col-sm-1"></div> <!--vazio-->
+</div>
+
+<div id="download" class="row"> <!-- download psd -->
+	<div class="col-sm-1"></div> <!--vazio-->
+	<div id="fill" class="col-sm-6">This is a clean and modern, four column website PSD template. You can code it into a Wordpress website, HTML5 responsive website for your personal or client works. So ahead and download this wonderful PSD template!</div>
+    <div id="fill" class="col-sm-4"><a href="#"><img src="download.png"></a></div>
+	<div class="col-sm-1"></div> <!--vazio -->
+</div> 
+         
+<div id="rodape" class="row"> <!-- rodapé -->   
+    <div class="col-sm-1"></div> <!-- VAZIO -->
+			<div class="col-sm-3">
+				<div class="text"><strong>ABOUT US</strong><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi euismod placerat dui et tincidunt. Sed sollicitudin posuere auctor. Phasellus at ultricies nisl. Integer at leo eros. Ut nec lorem id orci convallis porta. Donec pharetra neque eu velit dictum molestie.
+				</div>
+			</div>
+
+		    <div id="tabela" class="col-sm-1"><strong>EXPLORE</strong>
+            <ul>
+            	<li><a href="#">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul> </div>
+			<div id="tabela" class="col-sm-2 browse"><strong>BROWSE</strong>
+         	<ul>
+            	<li><a href="#">Carees</a></li>
+                <li><a href="#">Press &amp; Media</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        	</div>
+			<div class="col-sm-2"><strong>CONTACT US</strong><br>
+	           	BisLite Inc.
+				Always Street 265
+				0X - 125 - Canada
+				Phone: 987-6543-210
+				Fax: 987-6543-210
+			</div>
+
+			<div class="col-sm-2"><strong>CONNECT WITH US</strong><br>
+				<div class="icon"><img src="fb.png"></div>
+				<div class="icon"><img src="dribbble.png"></div>
+				<div class="icon"><img src="pinterest.png"></div>
+					<br>
+				<div class="icon"><img src="linkedin.png"></div>
+				<div class="icon" onclick="onCLick(this)"><img src="skype.png"></div>
+				<div class="icon"><img src="share.png"></div>
+			</div>
+
+			<div class="col-sm-1 margem"></div>
+   		 </div>
+
+   		 <footer class="row">
+		<div class="col-sm-9">
+			© Copyright 2012 - BisLite Inc. All rights reserved. Some free icons used here are created by Brankic1979.com.<br> 
+			Client Logos are copyright and trademark of the respective owners / companies.
+		</div>
+		<div class="col-sm-3"><img src="logo.png" class="img-responsive"></div>
+	</footer>  
+</div> <!-- container-->
+
+
+<!-- inicio dos Menus popUP -->
+<div id="sairDoMenu" onmouseover="sairDoMenu(this)"> </div>
+<div id="holder"></div>
+<div id="pop1" class="menuPopUp_0 menuPopUP"> <!-- MenuPopup, é exibido quando o mouse passa sobre seu respectivo item, sua posiçao é alterada pelo JS: "alinharPopUP(this)" e animado em CSS -->
+    
+    <div class="item">
+      <a href="#"> mais um item aqui</a>
+    </div>
+    <hr>
+
+     <div class="item">
+      <a href="#"> mais um item aqui</a>
+    </div>
+    <hr>
+
+     <div class="item">
+      <a href="#"> mais um item aqui</a>
+    </div>
+    <hr>
+  <div class="line"></div> <!-- Linha azul no final do menu -->
+</div>
+
+
+<div id="pop2" class="menuPopUP"> <!-- MenuPopup, é exibido quando o mouse passa sobre seu respectivo item, sua posiçao é alterada pelo JS: "alinharPopUP(this)" e animado em CSS -->
+    
+    <div class="item">
+      <a href="#"> Web Design </a>
+    </div>
+    <hr>
+
+     <div class="item">
+      <a href="#"> Wordpress Design </a>
+    </div>
+    <hr>
+
+     <div class="item">
+      <a href="#"> Mobile App Devplopment</a>
+    </div>
+    <hr>
+         <div class="item">
+      <a href="#">Internet Marketing</a>
+    </div>
+    <hr>
+    
+         <div class="item">
+      <a href="#">Social Media Management</a>
+    </div>
+    <hr>
+
+
+  <div class="line"></div> <!-- Linha azul no final do menu -->
+</div>
+
+<script>
+    var anterior;
+    var menuAtivo;
+    var botaoAtivo
+    var menuAberto
+
+     $('#slides').slidesjs({
+    width: 999,
+    height: 442,
+    callback: {
+        loaded: function(){
+          // hide navigation and pagination
+          $('.slidesjs-pagination, .slidesjs-navigation').hide(0); 
+        }
+    }
+});
+
+     $(".custom-item").click(function(e){
+  e.preventDefault();
+  $(this).addClass("active");
+  if (anterior != null)
+  {
+    $(anterior).removeClass("active");
+  }
+  anterior = this;
+  // use data-item value when triggering default pagination link
+  $('a[data-slidesjs-item="' + $(this).attr("data-item") + '"]').trigger('click');
+});
+
+
+    function setMenu(e, menu, temMenu)
+{
+  var elemento = e;
+
+  $(e).addClass("opcoesHeaderHover");
+  $(e).removeClass("opcoesHeader");
+if (temMenu)
+{
+  menuAberto = true;
+
+  $(".opcoesHeaderHover .icon").css("visibility", "visible");
+  $(menu).css("visibility", "visible");
+  $(menu).css("left", $(e).offset().left+"px");
+  $(menu).css("top", $(e).offset().top+40+"px");
+  $("#sairDoMenu").css("visibility", "visible");
+  $("#holder").css("visibility", "visible");
+  $("#holder").css("left", $(e).offset().left+"px");
+  $("#holder").css("top", $(e).offset().top+"px");
+  $("#holder").css("width", e.offsetWidth+"px");
+  $("#holder").css("height", e.offsetHeight+"px");
+  menuAtivo = $(menu).attr('id');
+}
+else
+{
+  $(".opcoesHeaderHover .icon").css("visibility", "hidden");
+}
+
+  botaoAtivo = e;
+}
+    function mouseOut()
+    {
+      if (!menuAberto)
+      {
+        $(botaoAtivo).addClass("opcoesHeader");
+        $(botaoAtivo).removeClass("opcoesHeaderHover");
+      }
+    }
+
+    function mostrarIcon()
+    {
+
+    }
+  function sairDoMenu(e)
+  {
+
+    $("#"+menuAtivo).css("visibility", "hidden");
+    $("#holder").css("visibility", "hidden");
+
+    $(botaoAtivo).addClass("opcoesHeader");
+    $(botaoAtivo).removeClass("opcoesHeaderHover");
+
+    $(e).css("visibility", "hidden");
+    menuAberto = false;
+  }
+</script>  
+</body>
+</html>
